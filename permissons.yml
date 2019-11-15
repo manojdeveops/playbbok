@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  - name: permissons with directory by ansible playbook
+    file:
+      path: /root/Desktop/Ravindra
+      state: directory
+      mode: "u=rwx,o=x"
+

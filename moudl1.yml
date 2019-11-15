@@ -1,0 +1,9 @@
+---
+- hosts: node1.com
+  tasks:
+  - name: install the latest version of Apache and MariaDB
+    yum:
+      name:
+       - httpd
+       - mariadb-server
+      state: latest

@@ -1,0 +1,13 @@
+---
+- hosts: node1.com
+  tasks: 
+  - name: multiple directories with permissions
+    file:
+      path: "{{ item.dest }}"
+      mode: "{{ item.mode }}"
+      state: directory
+    with_items:
+      - { dest: '/root/Desktop/Prasanth/', mode: '0777'}
+      - { dest: '/root/Desktop/Ravindra11/', mode: '0644'}
+      - { dest: '/root/Desktop/DevOps/', mode: '0444'}
+

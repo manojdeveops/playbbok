@@ -1,0 +1,12 @@
+---
+- hosts: node1.com
+  tasks:
+  - name: creating multiple directories by ansible playbook
+    file:
+      path: "{{item}}"
+      state: directory
+    with_items:
+      - '/root/Desktop/prasanth1'
+      - '/root/Desktop/Ravi123'
+      - '/root/Desktop/rama'
+ 
